@@ -118,7 +118,9 @@ export class Prediction {
   }
 }
 
-export interface Schema$Input { input: any; }
+export interface Schema$Input {
+  input: any;
+}
 export interface Schema$Output {
   id: string;
   kind: string;

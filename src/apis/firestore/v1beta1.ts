@@ -370,9 +370,9 @@ export interface Schema$DocumentTransform {
 /**
  * A generic empty message that you can re-use to avoid defining duplicated
  * empty messages in your APIs. A typical example is to use it as the request or
- * the response type of an API method. For instance:      service Foo {
- * rpc Bar(google.protobuf.Empty) returns (google.protobuf.Empty);     }  The
- * JSON representation for `Empty` is empty JSON object `{}`.
+ * the response type of an API method. For instance:      service Foo { rpc
+ * Bar(google.protobuf.Empty) returns (google.protobuf.Empty);     }  The JSON
+ * representation for `Empty` is empty JSON object `{}`.
  */
 export interface Schema$Empty {}
 /**
@@ -410,7 +410,9 @@ export interface Schema$FieldFilter {
 /**
  * A reference to a field, such as `max(messages.time) as max_time`.
  */
-export interface Schema$FieldReference { fieldPath: string; }
+export interface Schema$FieldReference {
+  fieldPath: string;
+}
 /**
  * A transformation of a field of the document.
  */
@@ -803,15 +805,15 @@ export interface Schema$RunQueryResponse {
  * environments.  Example uses of this error model include:  - Partial errors.
  * If a service needs to return partial errors to the client,     it may embed
  * the `Status` in the normal response to indicate the partial     errors.  -
- * Workflow errors. A typical workflow has multiple steps. Each step may
- * have a `Status` message for error reporting.  - Batch operations. If a client
- * uses batch request and batch response, the     `Status` message should be
- * used directly inside batch response, one for     each error sub-response.  -
- * Asynchronous operations. If an API call embeds asynchronous operation
- * results in its response, the status of those operations should be
- * represented directly using the `Status` message.  - Logging. If some API
- * errors are stored in logs, the message `Status` could     be used directly
- * after any stripping needed for security/privacy reasons.
+ * Workflow errors. A typical workflow has multiple steps. Each step may have a
+ * `Status` message for error reporting.  - Batch operations. If a client uses
+ * batch request and batch response, the     `Status` message should be used
+ * directly inside batch response, one for     each error sub-response.  -
+ * Asynchronous operations. If an API call embeds asynchronous operation results
+ * in its response, the status of those operations should be     represented
+ * directly using the `Status` message.  - Logging. If some API errors are
+ * stored in logs, the message `Status` could     be used directly after any
+ * stripping needed for security/privacy reasons.
  */
 export interface Schema$Status {
   /**
@@ -1223,7 +1225,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:batchGet')
+            url: (rootUrl + '/v1beta1/{+database}/documents:batchGet')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1280,7 +1282,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:beginTransaction')
+            url: (rootUrl + '/v1beta1/{+database}/documents:beginTransaction')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1335,7 +1337,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:commit')
+            url: (rootUrl + '/v1beta1/{+database}/documents:commit')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1393,7 +1395,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}/{collectionId}')
+            url: (rootUrl + '/v1beta1/{+parent}/{collectionId}')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1446,7 +1448,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{name}').replace(/([^:]\/)\/+/g, '$1'),
+            url: (rootUrl + '/v1beta1/{+name}').replace(/([^:]\/)\/+/g, '$1'),
             method: 'DELETE'
           },
           options),
@@ -1499,7 +1501,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{name}').replace(/([^:]\/)\/+/g, '$1'),
+            url: (rootUrl + '/v1beta1/{+name}').replace(/([^:]\/)\/+/g, '$1'),
             method: 'GET'
           },
           options),
@@ -1562,7 +1564,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}/{collectionId}')
+            url: (rootUrl + '/v1beta1/{+parent}/{collectionId}')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'GET'
           },
@@ -1619,7 +1621,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}:listCollectionIds')
+            url: (rootUrl + '/v1beta1/{+parent}:listCollectionIds')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1674,7 +1676,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:listen')
+            url: (rootUrl + '/v1beta1/{+database}/documents:listen')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1732,7 +1734,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{name}').replace(/([^:]\/)\/+/g, '$1'),
+            url: (rootUrl + '/v1beta1/{+name}').replace(/([^:]\/)\/+/g, '$1'),
             method: 'PATCH'
           },
           options),
@@ -1783,7 +1785,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:rollback')
+            url: (rootUrl + '/v1beta1/{+database}/documents:rollback')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1838,7 +1840,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}:runQuery')
+            url: (rootUrl + '/v1beta1/{+parent}:runQuery')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1893,7 +1895,7 @@ export class Resource$Projects$Databases$Documents {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{database}/documents:write')
+            url: (rootUrl + '/v1beta1/{+database}/documents:write')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -1966,7 +1968,7 @@ export class Resource$Projects$Databases$Indexes {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}/indexes')
+            url: (rootUrl + '/v1beta1/{+parent}/indexes')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'POST'
           },
@@ -2017,7 +2019,7 @@ export class Resource$Projects$Databases$Indexes {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{name}').replace(/([^:]\/)\/+/g, '$1'),
+            url: (rootUrl + '/v1beta1/{+name}').replace(/([^:]\/)\/+/g, '$1'),
             method: 'DELETE'
           },
           options),
@@ -2065,7 +2067,7 @@ export class Resource$Projects$Databases$Indexes {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{name}').replace(/([^:]\/)\/+/g, '$1'),
+            url: (rootUrl + '/v1beta1/{+name}').replace(/([^:]\/)\/+/g, '$1'),
             method: 'GET'
           },
           options),
@@ -2121,7 +2123,7 @@ export class Resource$Projects$Databases$Indexes {
     const parameters = {
       options: Object.assign(
           {
-            url: (rootUrl + '/v1beta1/{parent}/indexes')
+            url: (rootUrl + '/v1beta1/{+parent}/indexes')
                      .replace(/([^:]\/)\/+/g, '$1'),
             method: 'GET'
           },

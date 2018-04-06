@@ -355,8 +355,8 @@ export interface Schema$AccessConfig {
   natIP: string;
   /**
    * This signifies the networking tier used for configuring this access
-   * configuration and can only take the following values: PREMIUM, STANDARD.
-   * If an AccessConfig is specified without a valid external IP address, an
+   * configuration and can only take the following values: PREMIUM, STANDARD. If
+   * an AccessConfig is specified without a valid external IP address, an
    * ephemeral IP will be created with this networkTier.  If an AccessConfig
    * with a valid external IP address is specified, it must match that of the
    * networkTier associated with the Address resource owning that IP.
@@ -878,11 +878,11 @@ export interface Schema$Autoscaler {
    */
   name: string;
   /**
-   * [Output Only] Target recommended MIG size computed by autoscaler.
-   * Autoscaler calculates recommended MIG size even when autoscaling policy
-   * mode is different from ON. This field is empty when autoscaler is not
-   * connected to the existing managed instance group or autoscaler did not
-   * generate its first prediction.
+   * [Output Only] Target recommended MIG size (number of instances) computed by
+   * autoscaler. Autoscaler calculates recommended MIG size even when
+   * autoscaling policy mode is different from ON. This field is empty when
+   * autoscaler is not connected to the existing managed instance group or
+   * autoscaler did not generate its prediction.
    */
   recommendedSize: number;
   /**
@@ -1118,8 +1118,8 @@ export interface Schema$AutoscalingPolicyCustomMetricUtilization {
   /**
    * The target value of the metric that autoscaler should maintain. This must
    * be a positive value. A utilization metric scales number of virtual machines
-   * handling requests to increase or decrease proportionally to the metric.
-   * For example, a good metric to use as a utilization_target is
+   * handling requests to increase or decrease proportionally to the metric. For
+   * example, a good metric to use as a utilization_target is
    * compute.googleapis.com/instance/network/received_bytes_count. The
    * autoscaler will work to keep this value constant for each of the instances.
    */
@@ -1626,8 +1626,8 @@ export interface Schema$BackendServiceFailoverPolicy {
   /**
    * This option is used only when no healthy VMs are detected in the primary
    * and backup instance groups. When set to true, traffic is dropped. When set
-   * to false, new connections are sent across all VMs in the primary group.
-   * The default is false.
+   * to false, new connections are sent across all VMs in the primary group. The
+   * default is false.
    */
   dropTrafficIfUnhealthy: boolean;
   /**
@@ -1696,7 +1696,9 @@ export interface Schema$BackendServiceList {
    */
   warning: any;
 }
-export interface Schema$BackendServiceReference { backendService: string; }
+export interface Schema$BackendServiceReference {
+  backendService: string;
+}
 export interface Schema$BackendServicesScopedList {
   /**
    * List of BackendServices contained in this scope.
@@ -2815,12 +2817,12 @@ export interface Schema$ForwardingRule {
    */
   id: string;
   /**
-   * The IP address that this forwarding rule is serving on behalf of.
-   * Addresses are restricted based on the forwarding rule&#39;s load balancing
-   * scheme (EXTERNAL or INTERNAL) and scope (global or regional).  When the
-   * load balancing scheme is EXTERNAL, for global forwarding rules, the address
-   * must be a global IP, and for regional forwarding rules, the address must
-   * live in the same region as the forwarding rule. If this field is empty, an
+   * The IP address that this forwarding rule is serving on behalf of. Addresses
+   * are restricted based on the forwarding rule&#39;s load balancing scheme
+   * (EXTERNAL or INTERNAL) and scope (global or regional).  When the load
+   * balancing scheme is EXTERNAL, for global forwarding rules, the address must
+   * be a global IP, and for regional forwarding rules, the address must live in
+   * the same region as the forwarding rule. If this field is empty, an
    * ephemeral IPv4 address from the same scope (global or regional) will be
    * assigned. A regional forwarding rule supports IPv4 only. A global
    * forwarding rule supports either IPv4 or IPv6.  When the load balancing
@@ -2936,13 +2938,13 @@ export interface Schema$ForwardingRule {
   selfLink: string;
   /**
    * An optional prefix to the service name for this Forwarding Rule. If
-   * specified, will be the first label of the fully qualified service name.
-   * The label must be 1-63 characters long, and comply with RFC1035.
-   * Specifically, the label must be 1-63 characters long and match the regular
-   * expression `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character
-   * must be a lowercase letter, and all following characters must be a dash,
-   * lowercase letter, or digit, except the last character, which cannot be a
-   * dash.  This field is only used for internal load balancing.
+   * specified, will be the first label of the fully qualified service name. The
+   * label must be 1-63 characters long, and comply with RFC1035. Specifically,
+   * the label must be 1-63 characters long and match the regular expression
+   * `[a-z]([-a-z0-9]*[a-z0-9])?` which means the first character must be a
+   * lowercase letter, and all following characters must be a dash, lowercase
+   * letter, or digit, except the last character, which cannot be a dash.  This
+   * field is only used for internal load balancing.
    */
   serviceLabel: string;
   /**
@@ -3031,7 +3033,9 @@ export interface Schema$ForwardingRuleList {
    */
   warning: any;
 }
-export interface Schema$ForwardingRuleReference { forwardingRule: string; }
+export interface Schema$ForwardingRuleReference {
+  forwardingRule: string;
+}
 export interface Schema$ForwardingRulesScopedList {
   /**
    * List of forwarding rules contained in this scope.
@@ -3213,7 +3217,9 @@ export interface Schema$HealthCheckList {
  * - projects/project-id/global/httpHealthChecks/health-check  -
  * global/httpHealthChecks/health-check
  */
-export interface Schema$HealthCheckReference { healthCheck: string; }
+export interface Schema$HealthCheckReference {
+  healthCheck: string;
+}
 export interface Schema$HealthChecksAggregatedList {
   /**
    * [Output Only] Unique identifier for the resource; defined by the server.
@@ -6372,12 +6378,12 @@ export interface Schema$LogConfigCloudAuditOptions {
   logName: string;
 }
 /**
- * Increment a streamz counter with the specified metric and field names.
- * Metric names should start with a &#39;/&#39;, generally be lowercase-only,
- * and end in &quot;_count&quot;. Field names should not contain an initial
- * slash. The actual exported metric names will have &quot;/iam/policy&quot;
- * prepended.  Field names correspond to IAM request parameters and field values
- * are their respective values.  At present the only supported field names are -
+ * Increment a streamz counter with the specified metric and field names. Metric
+ * names should start with a &#39;/&#39;, generally be lowercase-only, and end
+ * in &quot;_count&quot;. Field names should not contain an initial slash. The
+ * actual exported metric names will have &quot;/iam/policy&quot; prepended.
+ * Field names correspond to IAM request parameters and field values are their
+ * respective values.  At present the only supported field names are -
  * &quot;iam_principal&quot;, corresponding to IAMContext.principal; -
  * &quot;&quot; (empty string), resulting in one aggretated counter with no
  * field.  Examples: counter { metric: &quot;/debug_access_count&quot; field:
@@ -8206,13 +8212,6 @@ export interface Schema$RegionSetLabelsRequest {
    */
   labels: any;
 }
-export interface Schema$RegionUrlMapsDeleteRequest {
-  /**
-   * begin_interface: MixerMutationRequestBuilder Request ID to support
-   * idempotency.
-   */
-  requestId: string;
-}
 export interface Schema$RegionUrlMapsValidateRequest {
   /**
    * Content of the UrlMap to be validated.
@@ -9036,7 +9035,9 @@ export interface Schema$SecurityPolicyList {
    */
   warning: any;
 }
-export interface Schema$SecurityPolicyReference { securityPolicy: string; }
+export interface Schema$SecurityPolicyReference {
+  securityPolicy: string;
+}
 /**
  * Represents a rule that describes one or more match conditions along with the
  * action to be taken when traffic matches this condition (allow or deny).
@@ -9782,10 +9783,26 @@ export interface Schema$Subnetwork {
    */
   privateIpGoogleAccess: boolean;
   /**
+   * The purpose of the resource. This field can be either PRIVATE_RFC_1918 or
+   * INTERNAL_HTTPS_LOAD_BALANCER. A subnetwork with purpose set to
+   * INTERNAL_HTTPS_LOAD_BALANCER is a user-created subnetwork that is reserved
+   * for Internal HTTP(S) Load Balancing. If unspecified, the purpose defaults
+   * to PRIVATE_RFC_1918.
+   */
+  purpose: string;
+  /**
    * URL of the region where the Subnetwork resides. This field can be set only
    * at resource creation time.
    */
   region: string;
+  /**
+   * The role of subnetwork. Currenly, this field is only used when purpose =
+   * INTERNAL_HTTPS_LOAD_BALANCER. The value can be set to ACTIVE or BACKUP. An
+   * ACTIVE subnetwork is one that is currently being used for Internal HTTP(S)
+   * Load Balancing. A BACKUP subnetwork is one that is ready to be promoted to
+   * ACTIVE or is currently draining.
+   */
+  role: string;
   /**
    * An array of configurations for secondary IP ranges for VM instances
    * contained in this subnetwork. The primary IP of such VM must belong to the
@@ -10510,7 +10527,9 @@ export interface Schema$TargetPoolsScopedList {
    */
   warning: any;
 }
-export interface Schema$TargetReference { target: string; }
+export interface Schema$TargetReference {
+  target: string;
+}
 export interface Schema$TargetSslProxiesSetBackendServiceRequest {
   /**
    * The URL of the new BackendService resource for the targetSslProxy.
@@ -11064,7 +11083,9 @@ export interface Schema$UrlMapList {
    */
   warning: any;
 }
-export interface Schema$UrlMapReference { urlMap: string; }
+export interface Schema$UrlMapReference {
+  urlMap: string;
+}
 export interface Schema$UrlMapsValidateRequest {
   /**
    * Content of the UrlMap to be validated.
@@ -33673,8 +33694,8 @@ export class Resource$Regionurlmaps {
    * @param {object} params Parameters for request
    * @param {string} params.project Project ID for this request.
    * @param {string} params.region Name of the region scoping this request.
+   * @param {string=} params.requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
    * @param {string} params.urlMap Name of the UrlMap resource to delete.
-   * @param {().RegionUrlMapsDeleteRequest} params.resource Request body data
    * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
    * @param {callback} callback The callback that handles the response.
    * @return {object} Request object
@@ -33786,6 +33807,7 @@ export class Resource$Regionurlmaps {
    * @param {object} params Parameters for request
    * @param {string} params.project Project ID for this request.
    * @param {string} params.region Name of the region scoping this request.
+   * @param {string=} params.requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
    * @param {().UrlMap} params.resource Request body data
    * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
    * @param {callback} callback The callback that handles the response.
@@ -33904,6 +33926,7 @@ export class Resource$Regionurlmaps {
    * @param {object} params Parameters for request
    * @param {string} params.project Project ID for this request.
    * @param {string} params.region Name of the region scoping this request.
+   * @param {string=} params.requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
    * @param {string} params.urlMap Name of the UrlMap resource to patch.
    * @param {().UrlMap} params.resource Request body data
    * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
@@ -34024,6 +34047,7 @@ export class Resource$Regionurlmaps {
    * @param {object} params Parameters for request
    * @param {string} params.project Project ID for this request.
    * @param {string} params.region Name of the region scoping this request.
+   * @param {string=} params.requestId begin_interface: MixerMutationRequestBuilder Request ID to support idempotency.
    * @param {string} params.urlMap Name of the UrlMap resource to update.
    * @param {().UrlMap} params.resource Request body data
    * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.

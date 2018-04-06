@@ -347,7 +347,9 @@ export interface Schema$Contest {
    */
   type: string;
 }
-export interface Schema$ContextParams { clientProfile: string; }
+export interface Schema$ContextParams {
+  clientProfile: string;
+}
 /**
  * A request to look up representative information for a single division.
  */

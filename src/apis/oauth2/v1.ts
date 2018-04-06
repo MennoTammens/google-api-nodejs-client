@@ -369,8 +369,12 @@ export class Oauth2 {
   }
 }
 
-export interface Schema$Jwk { keys: any[]; }
-export interface Schema$Raw { keyvalues: any[]; }
+export interface Schema$Jwk {
+  keys: any[];
+}
+export interface Schema$Raw {
+  keyvalues: any[];
+}
 export interface Schema$Tokeninfo {
   /**
    * The access type granted with this token. It can be offline or online.

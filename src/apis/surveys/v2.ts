@@ -128,7 +128,9 @@ export interface Schema$PageInfo {
   startIndex: number;
   totalResults: number;
 }
-export interface Schema$ResultsGetRequest { resultMask: Schema$ResultsMask; }
+export interface Schema$ResultsGetRequest {
+  resultMask: Schema$ResultsMask;
+}
 export interface Schema$ResultsMask {
   fields: Schema$FieldMask[];
   projection: string;

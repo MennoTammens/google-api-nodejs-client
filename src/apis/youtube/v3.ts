@@ -785,7 +785,9 @@ export interface Schema$ChannelBrandingSettings {
 /**
  * Details about the content of a channel.
  */
-export interface Schema$ChannelContentDetails { relatedPlaylists: any; }
+export interface Schema$ChannelContentDetails {
+  relatedPlaylists: any;
+}
 /**
  * The contentOwnerDetails object encapsulates channel data that is relevant for
  * YouTube Partners linked with the channel.
@@ -2244,7 +2246,9 @@ export interface Schema$InvideoTiming {
    */
   type: string;
 }
-export interface Schema$LanguageTag { value: string; }
+export interface Schema$LanguageTag {
+  value: string;
+}
 /**
  * A liveBroadcast resource represents an event that will be streamed, via live
  * video, on YouTube.
@@ -2949,13 +2953,13 @@ export interface Schema$LiveStreamContentDetails {
    * stream for many different broadcasts if those broadcasts occur at different
    * times.  If you set this value to false, then the stream will not be
    * reusable, which means that it can only be bound to one broadcast.
-   * Non-reusable streams differ from reusable streams in the following ways:
-   * - A non-reusable stream can only be bound to one broadcast.  - A
-   * non-reusable stream might be deleted by an automated process after the
-   * broadcast ends.  - The  liveStreams.list method does not list non-reusable
-   * streams if you call the method and set the mine parameter to true. The only
-   * way to use that method to retrieve the resource for a non-reusable stream
-   * is to use the id parameter to identify the stream.
+   * Non-reusable streams differ from reusable streams in the following ways: -
+   * A non-reusable stream can only be bound to one broadcast.  - A non-reusable
+   * stream might be deleted by an automated process after the broadcast ends.
+   * - The  liveStreams.list method does not list non-reusable streams if you
+   * call the method and set the mine parameter to true. The only way to use
+   * that method to retrieve the resource for a non-reusable stream is to use
+   * the id parameter to identify the stream.
    */
   isReusable: boolean;
 }
@@ -3091,7 +3095,9 @@ export interface Schema$Nonprofit {
    */
   nonprofitLegalName: string;
 }
-export interface Schema$NonprofitId { value: string; }
+export interface Schema$NonprofitId {
+  value: string;
+}
 /**
  * Paging details for lists of resources, including total number of items
  * available and number of resources returned in a single page.

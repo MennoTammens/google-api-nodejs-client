@@ -357,9 +357,15 @@ export interface Schema$Image {
    */
   url: string;
 }
-export interface Schema$ImagesDeleteAllResponse { deleted: Schema$Image[]; }
-export interface Schema$ImagesListResponse { images: Schema$Image[]; }
-export interface Schema$ImagesUploadResponse { image: Schema$Image; }
+export interface Schema$ImagesDeleteAllResponse {
+  deleted: Schema$Image[];
+}
+export interface Schema$ImagesListResponse {
+  images: Schema$Image[];
+}
+export interface Schema$ImagesUploadResponse {
+  image: Schema$Image;
+}
 export interface Schema$InAppProduct {
   /**
    * The default language of the localized data, as defined by BCP 47. e.g.

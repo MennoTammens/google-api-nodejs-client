@@ -1463,21 +1463,21 @@ export class Resource$Instances {
   }
 
 
-  /**
-   * sql.instances.import
-   * @desc Imports data into a Cloud SQL instance from a MySQL dump file stored
-   * in a Google Cloud Storage bucket.
-   * @alias sql.instances.import
-   * @memberOf! ()
-   *
-   * @param {object} params Parameters for request
-   * @param {string} params.instance Cloud SQL instance ID. This does not include the project ID.
-   * @param {string} params.project Project ID of the project that contains the instance.
-   * @param {().InstancesImportRequest} params.resource Request body data
-   * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
-   * @param {callback} callback The callback that handles the response.
-   * @return {object} Request object
-   */
+/**
+ * sql.instances.import
+ * @desc Imports data into a Cloud SQL instance from a MySQL dump file stored in
+ * a Google Cloud Storage bucket.
+ * @alias sql.instances.import
+ * @memberOf! ()
+ *
+ * @param {object} params Parameters for request
+ * @param {string} params.instance Cloud SQL instance ID. This does not include the project ID.
+ * @param {string} params.project Project ID of the project that contains the instance.
+ * @param {().InstancesImportRequest} params.resource Request body data
+ * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
+ * @param {callback} callback The callback that handles the response.
+ * @return {object} Request object
+ */
 import(params?: any, options?: MethodOptions): AxiosPromise<Schema$InstancesImportResponse>;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$InstancesImportResponse>, callback?: BodyResponseCallback<Schema$InstancesImportResponse>): void;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$InstancesImportResponse>, callback?: BodyResponseCallback<Schema$InstancesImportResponse>): void|AxiosPromise<Schema$InstancesImportResponse> {if(typeof options === 'function') {

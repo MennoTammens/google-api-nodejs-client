@@ -452,7 +452,9 @@ export interface Schema$ConferenceParameters {
    */
   addOnParameters: Schema$ConferenceParametersAddOnParameters;
 }
-export interface Schema$ConferenceParametersAddOnParameters { parameters: any; }
+export interface Schema$ConferenceParametersAddOnParameters {
+  parameters: any;
+}
 export interface Schema$ConferenceProperties {
   /**
    * The types of conference solutions that are supported for this calendar. The
@@ -710,8 +712,8 @@ export interface Schema$Event {
   iCalUID: string;
   /**
    * Opaque identifier of the event. When creating new single or recurring
-   * events, you can specify their IDs. Provided IDs must follow these rules:
-   * - characters allowed in the ID are those used in base32hex encoding, i.e.
+   * events, you can specify their IDs. Provided IDs must follow these rules: -
+   * characters allowed in the ID are those used in base32hex encoding, i.e.
    * lowercase letters a-v and digits 0-9, see section 3.1.2 in RFC2938  - the
    * length of the ID must be between 5 and 1024 characters  - the ID must be
    * unique per calendar  Due to the globally distributed nature of the system,
@@ -2494,22 +2496,22 @@ export class Resource$Events {
   }
 
 
-  /**
-   * calendar.events.import
-   * @desc Imports an event. This operation is used to add a private copy of an
-   * existing event to a calendar.
-   * @alias calendar.events.import
-   * @memberOf! ()
-   *
-   * @param {object} params Parameters for request
-   * @param {string} params.calendarId Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
-   * @param {integer=} params.conferenceDataVersion Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
-   * @param {boolean=} params.supportsAttachments Whether API client performing operation supports event attachments. Optional. The default is False.
-   * @param {().Event} params.resource Request body data
-   * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
-   * @param {callback} callback The callback that handles the response.
-   * @return {object} Request object
-   */
+/**
+ * calendar.events.import
+ * @desc Imports an event. This operation is used to add a private copy of an
+ * existing event to a calendar.
+ * @alias calendar.events.import
+ * @memberOf! ()
+ *
+ * @param {object} params Parameters for request
+ * @param {string} params.calendarId Calendar identifier. To retrieve calendar IDs call the calendarList.list method. If you want to access the primary calendar of the currently logged in user, use the "primary" keyword.
+ * @param {integer=} params.conferenceDataVersion Version number of conference data supported by the API client. Version 0 assumes no conference data support and ignores conference data in the event's body. Version 1 enables support for copying of ConferenceData as well as for creating new conferences using the createRequest field of conferenceData. The default is 0.
+ * @param {boolean=} params.supportsAttachments Whether API client performing operation supports event attachments. Optional. The default is False.
+ * @param {().Event} params.resource Request body data
+ * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
+ * @param {callback} callback The callback that handles the response.
+ * @return {object} Request object
+ */
 import(params?: any, options?: MethodOptions): AxiosPromise<Schema$Event>;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$Event>, callback?: BodyResponseCallback<Schema$Event>): void;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$Event>, callback?: BodyResponseCallback<Schema$Event>): void|AxiosPromise<Schema$Event> {if(typeof options === 'function') {

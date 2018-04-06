@@ -2436,21 +2436,21 @@ export class Resource$Instances {
   }
 
 
-  /**
-   * sql.instances.import
-   * @desc Imports data into a Cloud SQL instance from a MySQL dump file in
-   * Google Cloud Storage.
-   * @alias sql.instances.import
-   * @memberOf! ()
-   *
-   * @param {object} params Parameters for request
-   * @param {string} params.instance Cloud SQL instance ID. This does not include the project ID.
-   * @param {string} params.project Project ID of the project that contains the instance.
-   * @param {().InstancesImportRequest} params.resource Request body data
-   * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
-   * @param {callback} callback The callback that handles the response.
-   * @return {object} Request object
-   */
+/**
+ * sql.instances.import
+ * @desc Imports data into a Cloud SQL instance from a MySQL dump file in Google
+ * Cloud Storage.
+ * @alias sql.instances.import
+ * @memberOf! ()
+ *
+ * @param {object} params Parameters for request
+ * @param {string} params.instance Cloud SQL instance ID. This does not include the project ID.
+ * @param {string} params.project Project ID of the project that contains the instance.
+ * @param {().InstancesImportRequest} params.resource Request body data
+ * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
+ * @param {callback} callback The callback that handles the response.
+ * @return {object} Request object
+ */
 import(params?: any, options?: MethodOptions): AxiosPromise<Schema$Operation>;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$Operation>, callback?: BodyResponseCallback<Schema$Operation>): void;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$Operation>, callback?: BodyResponseCallback<Schema$Operation>): void|AxiosPromise<Schema$Operation> {if(typeof options === 'function') {

@@ -459,15 +459,15 @@ export interface Schema$GoogleLongrunningOperation {
  * environments.  Example uses of this error model include:  - Partial errors.
  * If a service needs to return partial errors to the client,     it may embed
  * the `Status` in the normal response to indicate the partial     errors.  -
- * Workflow errors. A typical workflow has multiple steps. Each step may
- * have a `Status` message for error reporting.  - Batch operations. If a client
- * uses batch request and batch response, the     `Status` message should be
- * used directly inside batch response, one for     each error sub-response.  -
- * Asynchronous operations. If an API call embeds asynchronous operation
- * results in its response, the status of those operations should be
- * represented directly using the `Status` message.  - Logging. If some API
- * errors are stored in logs, the message `Status` could     be used directly
- * after any stripping needed for security/privacy reasons.
+ * Workflow errors. A typical workflow has multiple steps. Each step may have a
+ * `Status` message for error reporting.  - Batch operations. If a client uses
+ * batch request and batch response, the     `Status` message should be used
+ * directly inside batch response, one for     each error sub-response.  -
+ * Asynchronous operations. If an API call embeds asynchronous operation results
+ * in its response, the status of those operations should be     represented
+ * directly using the `Status` message.  - Logging. If some API errors are
+ * stored in logs, the message `Status` could     be used directly after any
+ * stripping needed for security/privacy reasons.
  */
 export interface Schema$Status {
   /**
@@ -563,23 +563,23 @@ export class Resource$Projects {
   }
 
 
-  /**
-   * datastore.projects.import
-   * @desc Imports entities into Google Cloud Datastore. Existing entities with
-   * the same key are overwritten. The import occurs in the background and its
-   * progress can be monitored and managed via the Operation resource that is
-   * created. If an ImportEntities operation is cancelled, it is possible that a
-   * subset of the data has already been imported to Cloud Datastore.
-   * @alias datastore.projects.import
-   * @memberOf! ()
-   *
-   * @param {object} params Parameters for request
-   * @param {string} params.projectId Project ID against which to make the request.
-   * @param {().GoogleDatastoreAdminV1beta1ImportEntitiesRequest} params.resource Request body data
-   * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
-   * @param {callback} callback The callback that handles the response.
-   * @return {object} Request object
-   */
+/**
+ * datastore.projects.import
+ * @desc Imports entities into Google Cloud Datastore. Existing entities with
+ * the same key are overwritten. The import occurs in the background and its
+ * progress can be monitored and managed via the Operation resource that is
+ * created. If an ImportEntities operation is cancelled, it is possible that a
+ * subset of the data has already been imported to Cloud Datastore.
+ * @alias datastore.projects.import
+ * @memberOf! ()
+ *
+ * @param {object} params Parameters for request
+ * @param {string} params.projectId Project ID against which to make the request.
+ * @param {().GoogleDatastoreAdminV1beta1ImportEntitiesRequest} params.resource Request body data
+ * @param {object} [options] Optionally override request options, such as `url`, `method`, and `encoding`.
+ * @param {callback} callback The callback that handles the response.
+ * @return {object} Request object
+ */
 import(params?: any, options?: MethodOptions): AxiosPromise<Schema$GoogleLongrunningOperation>;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$GoogleLongrunningOperation>, callback?: BodyResponseCallback<Schema$GoogleLongrunningOperation>): void;
 import(params?: any, options?: MethodOptions|BodyResponseCallback<Schema$GoogleLongrunningOperation>, callback?: BodyResponseCallback<Schema$GoogleLongrunningOperation>): void|AxiosPromise<Schema$GoogleLongrunningOperation> {

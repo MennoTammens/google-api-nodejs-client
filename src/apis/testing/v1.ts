@@ -29,7 +29,7 @@ import {createAPIRequest} from '../../lib/apirequest';
 // tslint:disable: jsdoc-format
 
 /**
- * Google Cloud Testing API
+ * Cloud Testing API
  *
  * Allows developers to run automated tests for their mobile applications on
  * Google infrastructure.
@@ -426,7 +426,9 @@ export interface Schema$Apk {
  * Android application details based on application manifest and apk archive
  * contents
  */
-export interface Schema$ApkDetail { apkManifest: Schema$ApkManifest; }
+export interface Schema$ApkDetail {
+  apkManifest: Schema$ApkManifest;
+}
 /**
  * An Android app manifest. See
  * http://developer.android.com/guide/topics/manifest/manifest-intro.html
@@ -505,7 +507,8 @@ export interface Schema$Date {
    */
   day: number;
   /**
-   * Month of year. Must be from 1 to 12.
+   * Month of year. Must be from 1 to 12, or 0 if specifying a date without a
+   * month.
    */
   month: number;
   /**
